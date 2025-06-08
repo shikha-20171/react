@@ -1,27 +1,24 @@
-import React from 'react';
- export const userData = {
-  firstName: 'Maxmilian',
-  lastName: 'Schwarmuller',
-  title: 'Instructor',
- };
- export function User() {
-  return(
-    <div id="user" data-testid="user">
-      <h2> 
-        {userData.firstName} {userData.lastName}
-      </h2>
-      <p>
-        {userData.title}
-      </p>
-    </div>
-  );
- }
+export function CourseGoal({title,description}) 
+  {
+    return (
+      <li>
+      <h2>{title}</h2>
+      <p>{description}</p>
+      </li>
+    );
+  }
+
   function App() {
     return (
-      <div id="app">
-        <h1>Time to Practice</h1>
-        <p>Welcome on board of this course! you got this</p>
-        <User/>
+      <div id="app" data-testid="app">
+      <h1>Time to Practice</h1>
+      <p>One course, many goals</p>
+      <ul>
+        <CourseGoal title="Learn React"
+        description="In- depth" />
+        <CourseGoal title="Master Javascript"
+        description="step-be-step with projects" />
+      </ul>
       </div>
     );
   }
