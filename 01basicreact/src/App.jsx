@@ -1,25 +1,25 @@
-export function CourseGoal({title,description}) 
-  {
-    return (
-      <li>
-      <h2>{title}</h2>
-      <p>{description}</p>
-      </li>
-    );
-  }
+import Card from './Card';
+function App(){
+  return(
+    <div id = "app">
+<h1>Available Experts</h1>
+<Card name = "Shikha Gour">
+  <p>Shikha is a professor of computer science at the university of america.
+     </p>
+     <p>
+      <a href="mailto:gour@gmail.com">Email shikha </a>
+     </p>
+</Card>
+<Card name= "Nidhi Gour">
+  <p>
+    nidhi is a professor of computer science at the university of california .
+  </p>
+  <p>
+    <a href="mailto:gour@gmail.com">Email nidhi</a>
+  </p>
+ </Card>
 
-  function App() {
-    return (
-      <div id="app" data-testid="app">
-      <h1>Time to Practice</h1>
-      <p>One course, many goals</p>
-      <ul>
-        <CourseGoal title="Learn React"
-        description="In- depth" />
-        <CourseGoal title="Master Javascript"
-        description="step-be-step with projects" />
-      </ul>
-      </div>
-    );
-  }
-  export default App;
+    </div>
+  );
+}
+export default App;
